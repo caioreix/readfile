@@ -32,7 +32,7 @@ func main() {
 ```
 
 ### ByLine
-Read an entire file and populate a string
+Read a file line by line
 
 ```go
 package main
@@ -57,7 +57,7 @@ func main() {
 ```
 
 ### ByWord
-Read an entire file and populate a string
+Read a file word by word
 
 ```go
 package main

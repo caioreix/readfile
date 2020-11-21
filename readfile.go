@@ -39,7 +39,7 @@ func ByLine(path string) ([]string, error) {
 
 // ByWord read a file word by word
 func ByWord(path string) ([]string, error) {
-	var lines []string
+	var words []string
 
 	file, err := os.Open(path)
 	if err != nil {
@@ -50,11 +50,11 @@ func ByWord(path string) ([]string, error) {
 	scanner := bufio.NewScanner(file)
 	scanner.Split(bufio.ScanWords)
 	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
+		words = append(words, scanner.Text())
 	}
 	if err := scanner.Err(); err != nil {
 		return nil, err
 	}
 
-	return lines, nil
+	return words, nil
 }
